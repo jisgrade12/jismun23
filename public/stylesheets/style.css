@@ -26,21 +26,18 @@ body {
 body::-webkit-scrollbar {
   width: 1vw;
 }
-body::-webkit-scrollbar-button {
-  background-color: var(--light);
-}
 body::-webkit-scrollbar-track {
   background-color: var(--light);
 }
 body::-webkit-scrollbar-thumb {
   background-color: var(--accent-light);
   border-radius: 50px;
-  border: 0.25vw solid var(--light);
+  border: 0.35vw solid var(--light);
 }
 body::-webkit-scrollbar-thumb:hover {
   background-color: var(--accent-dark);
   cursor: pointer;
-  border: 0.2vw solid var(--light);
+  border: 0.3vw solid var(--light);
 }
 nav {
   position: fixed;
