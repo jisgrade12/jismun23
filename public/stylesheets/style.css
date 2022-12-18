@@ -73,7 +73,7 @@ div.slide1 {
 div.slide1 img {
   z-index: 0;
   width: 30vw;
-  opacity: 0.2;
+  opacity: 0.3;
   position: absolute;
 }
 div.slide1 h1,
@@ -81,6 +81,22 @@ div.slide1 h2 {
   margin: 0;
   font-weight: 100;
   z-index: 1;
+  transition: all 0.7s ease-in-out;
+}
+div.slide1 h1 {
+  margin-right: -22vw;
+}
+div.slide1 h1::after {
+  content: " | Boys";
+  opacity: 0;
+  transition: all 0.7s ease-in-out;
+}
+div.slide1 h1:hover {
+  text-shadow: var(--accent-dark) 0.3vw 0.3vw 0.4vw;
+  margin-right: 0;
+}
+div.slide1 h1:hover::after {
+  opacity: 1;
 }
 h1 {
   font-size: 7vw;
