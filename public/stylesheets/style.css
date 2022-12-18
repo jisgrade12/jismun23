@@ -8,6 +8,7 @@
 }
 * {
   scroll-behavior: smooth;
+  scroll-margin-top: 7vw;
 }
 a {
   text-decoration: none;
@@ -31,14 +32,16 @@ nav {
   width: 100%;
   height: 6vw;
   border-bottom: var(--gold) 1px solid;
+  transition: all 0.5s ease-in-out;
 }
 nav > div:nth-child(1) {
   display: flex;
   align-items: center;
 }
-nav > div:nth-child(1) > img {
+nav > div:nth-child(1) > a > img {
   height: 5vw;
   margin-left: 1vw;
+  transition: all 0.5s ease-in-out;
 }
 nav > div:nth-child(2) {
   display: flex;
@@ -47,28 +50,65 @@ nav > div:nth-child(2) {
   margin-right: 1vw;
 }
 nav > div:nth-child(2) > a {
-  margin: 0 0.5vw;
-  padding: 0.5vw;
+  margin: 0 0.4vw;
+  padding: 0.6vw 0.7vw;
+  box-sizing: border-box;
+  border-radius: 0.4vw;
+  transition: all 0.5s ease-in-out;
 }
 nav > div:nth-child(2) > a:hover {
   background-color: #1e395717;
   border-radius: 0.5vw;
 }
+nav > div:nth-child(2) > a:active {
+  border: 1px solid var(--gold);
+  transition: all 3ms ease-in-out;
+}
+nav > div:nth-child(2) > a:last-child {
+  background-color: var(--accent-light);
+  color: var(--light);
+}
+nav > div:nth-child(2) > a:last-child:hover {
+  background-color: var(--accent-dark);
+  color: var(--light);
+}
+a.nav-active {
+  border: var(--accent-light) 1px solid;
+}
 .nav-resistance {
   height: 6vw;
   width: 100%;
 }
-div.slide1 {
+h1 {
+  font-size: 7vw;
+}
+h2 {
+  font-size: 3vw;
+  font-weight: 200;
+}
+h3 {
+  font-size: 3vw;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+h4 {
+  font-size: 2.5vw;
+  font-weight: lighter;
+}
+div.slide1,
+div.slide2 {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   text-align: center;
-  font-family: "playfair display sc", serif;
-  font-size: 7vw;
   width: 100%;
   height: calc(100vh - 6vw);
   background-color: var(--light);
+}
+div.slide1 {
+  align-items: center;
+  justify-content: center;
+  font-family: "playfair display sc", serif;
+  font-size: 7vw;
 }
 div.slide1 img {
   z-index: 0;
@@ -83,25 +123,22 @@ div.slide1 h2 {
   z-index: 1;
   transition: all 0.7s ease-in-out;
 }
-div.slide1 h1 {
-  margin-right: -22vw;
+div.slide2 {
+  align-items: flex-start;
+  text-align: left;
 }
-div.slide1 h1::after {
-  content: " | Boys";
-  opacity: 0;
-  transition: all 0.7s ease-in-out;
+div.slide2 h3,
+div.slide2 h4 {
+  margin: 1vw 3vw;
 }
-div.slide1 h1:hover {
-  text-shadow: var(--accent-dark) 0.3vw 0.3vw 0.4vw;
-  margin-right: 0;
+div.slide2 h3::before {
+  transition: all 0.5s ease-in-out;
+  content: "\276F";
+  margin-left: -1.3vw;
+  color: transparent;
 }
-div.slide1 h1:hover::after {
-  opacity: 1;
-}
-h1 {
-  font-size: 7vw;
-}
-h2 {
-  font-size: 3vw;
-  font-weight: 200;
+div.slide2 a:hover h3::before {
+  margin-left: 0;
+  margin-right: 1vw;
+  color: var(--text-color);
 }
