@@ -69,6 +69,7 @@ nav > div:nth-child(2) {
   align-items: center;
   justify-content: end;
   margin-right: 5vw;
+  color: var(--light);
 }
 nav > div:nth-child(2) > a {
   margin: 0 0.6vw;
@@ -99,12 +100,22 @@ nav > div:nth-child(2) > a:last-child:hover {
   box-shadow: var(--dark) 0 0 1vw;
 }
 a.nav-active {
-  border-bottom: var(--accent-light) 1px solid;
+  border-bottom: var(--light) 1px solid;
   box-sizing: border-box;
 }
 .scrolled-active {
-  border: var(--accent-light) 1px solid;
+  border: var(--accent-light) 1px solid !important;
   padding: calc(0.8vw - 1px) calc(0.9vw - 1px) 0.8vw calc(0.9vw - 1px) !important;
+}
+.linkies-active {
+  color: var(--dark) !important;
+  border-color: var(--accent-light);
+}
+.bg-active {
+  opacity: 0.3 !important;
+}
+.title-active {
+  color: var(--dark) !important;
 }
 .nav-resistance {
   background-color: var(--light);
@@ -133,7 +144,7 @@ div.slide2 {
   flex-direction: column;
   text-align: center;
   width: 100%;
-  height: calc(100vh - 6vw);
+  height: 100vh;
   background-color: var(--light);
 }
 div.slide1 {
@@ -142,12 +153,15 @@ div.slide1 {
   font-family: "playfair display sc", serif;
   font-size: 7vw;
   filter: brightness(0.97);
+  color: var(--light);
 }
 div.slide1 img {
   z-index: 0;
-  width: 30vw;
-  opacity: 0.3;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
   position: absolute;
+  transition: all 0.5s ease-in-out;
 }
 div.slide1 h1,
 div.slide1 h2 {
