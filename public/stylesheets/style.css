@@ -21,7 +21,7 @@ a:hover {
 html,
 body {
   margin: 0;
-  font-family: "playfair display", serif;
+  font-family: "Montserrat", sans-serif;
 }
 body::-webkit-scrollbar {
   width: 1vw;
@@ -47,21 +47,27 @@ nav {
   background-color: transparent;
   width: 100%;
   height: 6vw;
-  border-bottom: var(--gold) 1px solid;
+  border-bottom: var(--light) 1px solid;
   transition: all 0.5s ease-in-out;
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   font-size: 1.2vw;
+}
+.navd {
+  justify-content: center !important;
 }
 nav > div:nth-child(1) {
   display: flex;
   align-items: center;
-  font-family: "Playfair display", serif;
-  color: var(--gold);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  color: var(--light);
   font-size: 3vw;
+  transition: all 0.5s ease-in-out;
 }
 nav > div:nth-child(1) > a > img {
   height: 5vw;
   margin: 0 1.5vw;
+  filter: brightness(4);
   transition: all 0.5s ease-in-out;
 }
 nav > div:nth-child(2) {
@@ -75,12 +81,10 @@ nav > div:nth-child(2) > a {
   margin: 0 0.6vw;
   padding: 0.8vw 0.9vw;
   box-sizing: border-box;
-  border-radius: 0.25vw;
   transition: all 0.5s ease-in-out;
 }
 nav > div:nth-child(2) > a:hover {
   background-color: #1e395717;
-  border-radius: 0.5vw;
   box-sizing: border-box;
 }
 nav > div:nth-child(2) > a:active {
@@ -90,6 +94,7 @@ nav > div:nth-child(2) > a:active {
 nav > div:nth-child(2) > a:last-child {
   background-color: var(--accent-light);
   color: var(--light);
+  font-weight: 600;
 }
 nav > div:nth-child(2) > a:last-child:hover {
   background-color: var(--accent-dark);
@@ -98,6 +103,7 @@ nav > div:nth-child(2) > a:last-child:hover {
 .fixed-header {
   background-color: #f5f7fae8;
   box-shadow: var(--dark) 0 0 1vw;
+  border-bottom: var(--gold) 2px solid;
 }
 a.nav-active {
   border-bottom: var(--light) 1px solid;
@@ -121,16 +127,24 @@ a.nav-active {
 .title-active {
   color: var(--dark) !important;
 }
+.logo-active {
+  filter: none !important;
+  margin-left: 8vw !important;
+}
+.logo2-active {
+  opacity: 0 !important;
+}
 .nav-resistance {
   background-color: var(--light);
   height: 6vw;
   width: 100%;
 }
 h1 {
-  font-size: 7vw;
+  font-size: 5vw;
+  font-weight: 900 !important;
 }
 h2 {
-  font-size: 3vw;
+  font-size: 2vw;
   font-weight: 200;
 }
 h3 {
@@ -146,15 +160,14 @@ div.slide1,
 div.slide2 {
   display: flex;
   flex-direction: column;
-  text-align: center;
+  text-align: left;
   width: 100%;
   height: 100vh;
   background-color: var(--light);
 }
 div.slide1 {
-  align-items: center;
+  align-items: left;
   justify-content: center;
-  font-family: "playfair display sc", serif;
   font-size: 7vw;
   filter: brightness(0.97);
   color: var(--light);
@@ -169,10 +182,11 @@ div.slide1 img {
 }
 div.slide1 h1,
 div.slide1 h2 {
-  margin: 0;
+  margin: 0 40vw 0 3vw;
   font-weight: 100;
   z-index: 1;
   transition: all 0.7s ease-in-out;
+  font-family: "Montserrat", sans-serif;
 }
 div.slide2 {
   align-items: flex-start;
@@ -203,16 +217,19 @@ div.slide1 a {
 }
 .main-button {
   z-index: 1;
-  margin-top: 2vw;
+  margin: 5vw 65vw 0 3vw;
   padding: 1.5vw 2vw;
   font-size: 3vw;
-  background-color: #1e39577d;
-  border: #0f1f2f 1px solid;
+  background-color: #f5f7faa0;
   box-sizing: border-box;
-  color: var(--light);
-  border-radius: 1vw;
+  color: var(--accent-dark);
   cursor: pointer;
   transition: all 0.5s ease-in-out;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 .main-button:hover {
   transform: translateY(-0.5vw);
