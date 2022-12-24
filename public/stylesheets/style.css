@@ -8,7 +8,7 @@
 }
 * {
   scroll-behavior: smooth;
-  scroll-margin-top: 7vw;
+  scroll-margin-top: 8vw;
 }
 a {
   text-decoration: none;
@@ -47,13 +47,9 @@ nav {
   background-color: transparent;
   width: 100%;
   height: 6vw;
-  border-bottom: var(--light) 1px solid;
   transition: all 0.5s ease-in-out;
   font-family: "Montserrat", sans-serif;
   font-size: 1.2vw;
-}
-.navd {
-  justify-content: center !important;
 }
 nav > div:nth-child(1) {
   display: flex;
@@ -67,7 +63,7 @@ nav > div:nth-child(1) {
 nav > div:nth-child(1) > a > img {
   height: 5vw;
   margin: 0 1.5vw;
-  filter: brightness(4);
+  filter: brightness(0) invert(1);
   transition: all 0.5s ease-in-out;
 }
 nav > div:nth-child(2) {
@@ -76,6 +72,8 @@ nav > div:nth-child(2) {
   justify-content: end;
   margin-right: 5vw;
   color: var(--light);
+  transition: all 0.5s ease-in-out, color 0s ease-in-out;
+  transition-delay: 0ms;
 }
 nav > div:nth-child(2) > a {
   margin: 0 0.6vw;
@@ -92,7 +90,7 @@ nav > div:nth-child(2) > a:active {
   transition: all 3ms ease-in-out;
 }
 nav > div:nth-child(2) > a:last-child {
-  background-color: var(--accent-light);
+  background-color: var(--gold);
   color: var(--light);
   font-weight: 600;
 }
@@ -114,8 +112,11 @@ a.nav-active {
   padding: calc(0.8vw - 1px) calc(0.9vw - 1px) 0.8vw calc(0.9vw - 1px) !important;
 }
 .linkies-active {
+  align-items: center;
+  justify-content: center;
   color: var(--dark) !important;
   border-color: var(--accent-light);
+  margin-right: 10vw !important;
 }
 .slide-bg {
   filter: brightness(0.6);
@@ -128,8 +129,8 @@ a.nav-active {
   color: var(--dark) !important;
 }
 .logo-active {
-  filter: none !important;
-  margin-left: 8vw !important;
+  filter: brightness(1) invert(0) drop-shadow(1px 1px 10px #ffffff) !important;
+  margin-left: 13vw !important;
 }
 .logo2-active {
   opacity: 0 !important;
@@ -141,14 +142,15 @@ a.nav-active {
 }
 h1 {
   font-size: 5vw;
-  font-weight: 900 !important;
+  font-weight: 1000 !important;
 }
 h2 {
   font-size: 2vw;
-  font-weight: 200;
+  font-weight: 300;
 }
 h3 {
-  font-size: 3vw;
+  font-family: "playfair display sc", serif;
+  font-size: 4vw;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -180,9 +182,36 @@ div.slide1 img {
   position: absolute;
   transition: all 0.5s ease-in-out;
 }
+div.slide1 a {
+  z-index: 1;
+  margin: 4vw 70vw 0 3vw;
+}
+div.slide1 > a > span {
+  z-index: 1;
+  position: absolute;
+  font-size: 5vw;
+  top: 90vh;
+  left: 47vw;
+  animation: arrow 2s 0s linear infinite;
+  transform: translateY(-1vw);
+  user-select: none;
+}
+div.slide1 > a:hover {
+  color: inherit;
+}
+@keyframes arrow {
+  0% {
+    transform: translateY(-2vw);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(1vw);
+    opacity: 0;
+  }
+}
 div.slide1 h1,
 div.slide1 h2 {
-  margin: 0 40vw 0 3vw;
+  margin: 2vw 40vw 0 3vw;
   font-weight: 100;
   z-index: 1;
   transition: all 0.7s ease-in-out;
@@ -191,6 +220,7 @@ div.slide1 h2 {
 div.slide2 {
   align-items: flex-start;
   text-align: left;
+  height: calc(100vh - 6vw);
 }
 div.slide2 > a {
   margin: 2vw 3vw;
@@ -212,14 +242,11 @@ div.slide2 a:hover h3::before {
   margin-right: 1vw;
   color: var(--text-color);
 }
-div.slide1 a {
-  z-index: 1;
-}
 .main-button {
   z-index: 1;
-  margin: 5vw 65vw 0 3vw;
   padding: 1.5vw 2vw;
-  font-size: 3vw;
+  font-size: 2.5vw;
+  font-weight: 400;
   background-color: #f5f7faa0;
   box-sizing: border-box;
   color: var(--accent-dark);
@@ -236,4 +263,29 @@ div.slide1 a {
   background-color: var(--dark);
   color: var(--gold);
   border-color: var(--dark);
+}
+.slide-divide {
+  display: grid;
+  width: 100%;
+  height: 70%;
+  margin-top: -1vw;
+  grid-template-columns: 50% 50%;
+}
+.slide-divide > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 3vw;
+}
+.slide-divide > div:nth-child(1) {
+  font-family: "playfair display sc", serif;
+  border-right: var(--accent-dark) 0.3vw solid;
+  font-size: 6vw;
+  font-weight: 900;
+}
+.slide-divide > div:nth-child(2) {
+  font-family: "playfair display", serif;
+  font-size: 3vw;
+  font-weight: 200;
 }
