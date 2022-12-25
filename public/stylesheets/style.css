@@ -57,12 +57,12 @@ nav > div:nth-child(1) {
   font-family: "Montserrat", sans-serif;
   font-weight: 900;
   color: var(--light);
-  font-size: 3vw;
+  font-size: 2vw;
   transition: all 0.5s ease-in-out;
 }
 nav > div:nth-child(1) > a > img {
   height: 5vw;
-  margin: 0 1.5vw;
+  margin: 0 1.25vw 0 4.5vw;
   filter: brightness(0) invert(1);
   transition: all 0.5s ease-in-out;
 }
@@ -70,7 +70,7 @@ nav > div:nth-child(2) {
   display: flex;
   align-items: center;
   justify-content: end;
-  margin-right: 5vw;
+  margin-right: 10vw;
   color: var(--light);
   transition: all 0.5s ease-in-out, color 0s ease-in-out;
   transition-delay: 0ms;
@@ -92,16 +92,19 @@ nav > div:nth-child(2) > a:active {
 nav > div:nth-child(2) > a:last-child {
   background-color: var(--gold);
   color: var(--light);
-  font-weight: 600;
+  padding: 0.7vw 2vw;
+  border: var(--gold) 1px solid;
+  box-sizing: border-box;
 }
 nav > div:nth-child(2) > a:last-child:hover {
   background-color: var(--accent-dark);
   color: var(--light);
+  border: var(--light) 1px solid;
 }
 .fixed-header {
-  background-color: #f5f7fae8;
-  box-shadow: var(--dark) 0 0 1vw;
-  border-bottom: var(--gold) 2px solid;
+  background-color: #fffffff9;
+  box-shadow: var(--dark) 0 0 10px;
+  /*SAALIM-REMOVED BORDER*/
 }
 a.nav-active {
   border-bottom: var(--light) 1px solid;
@@ -118,19 +121,12 @@ a.nav-active {
   border-color: var(--accent-light);
   margin-right: 10vw !important;
 }
-.slide-bg {
-  filter: brightness(0.6);
-}
 .bg-active {
-  opacity: 0.4 !important;
   filter: none !important;
-}
-.title-active {
-  color: var(--dark) !important;
 }
 .logo-active {
   filter: brightness(1) invert(0) drop-shadow(1px 1px 10px #ffffff) !important;
-  margin-left: 13vw !important;
+  margin-left: 9vw !important;
 }
 .logo2-active {
   opacity: 0 !important;
@@ -141,11 +137,11 @@ a.nav-active {
   width: 100%;
 }
 h1 {
-  font-size: 5vw;
+  font-size: 4.5vw;
   font-weight: 1000 !important;
 }
 h2 {
-  font-size: 2vw;
+  font-size: 1.5vw;
   font-weight: 300;
 }
 h3 {
@@ -184,7 +180,7 @@ div.slide1 img {
 }
 div.slide1 a {
   z-index: 1;
-  margin: 4vw 70vw 0 3vw;
+  margin: 4vw 77vw 0 5vw;
 }
 div.slide1 > a > span {
   z-index: 1;
@@ -211,11 +207,13 @@ div.slide1 > a:hover {
 }
 div.slide1 h1,
 div.slide1 h2 {
-  margin: 2vw 40vw 0 3vw;
-  font-weight: 100;
+  margin: 2vw 45vw 0 5vw;
   z-index: 1;
   transition: all 0.7s ease-in-out;
   font-family: "Montserrat", sans-serif;
+}
+div.slide1 h1 {
+  margin-top: 20vh;
 }
 div.slide2 {
   align-items: flex-start;
@@ -244,10 +242,10 @@ div.slide2 a:hover h3::before {
 }
 .main-button {
   z-index: 1;
-  padding: 1.5vw 2vw;
-  font-size: 2.5vw;
+  padding: 1.25vw 1.5vw;
+  font-size: 1.5vw;
   font-weight: 400;
-  background-color: #f5f7faa0;
+  background-color: var(--light);
   box-sizing: border-box;
   color: var(--accent-dark);
   cursor: pointer;
@@ -259,10 +257,7 @@ div.slide2 a:hover h3::before {
   text-align: center;
 }
 .main-button:hover {
-  transform: translateY(-0.5vw);
-  background-color: var(--dark);
-  color: var(--gold);
-  border-color: var(--dark);
+  transform: translateY(-0.25vw);
 }
 .slide-divide {
   display: grid;
