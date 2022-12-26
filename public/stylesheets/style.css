@@ -5,11 +5,11 @@
   --gold: #cea263;
   --accent-light: #1e3957;
   --accent-dark: #0f1f2f;
-  --lightw: #f3efe5;
+  --lightw: #fffffd;
 }
 * {
   scroll-behavior: smooth;
-  scroll-margin-top: 7vw;
+  scroll-margin-top: 8vw;
 }
 a {
   text-decoration: none;
@@ -103,7 +103,7 @@ nav > div:nth-child(2) > a:last-child:hover {
   border: var(--light) 1px solid;
 }
 .fixed-header {
-  background-color: #f3efe5ee;
+  background-color: #fffffdee;
   box-shadow: var(--dark) 0 0 10px;
 }
 a.nav-active {
@@ -130,7 +130,6 @@ a.nav-active {
   color: var(--accent-light);
 }
 .nav-resistance {
-  background-color: var(--light);
   height: 6vw;
   width: 100%;
 }
@@ -223,7 +222,7 @@ div.slide2 > a {
   margin: 2vw 3vw;
 }
 div.slide2 h3 {
-  margin: -1vw -1.5vw;
+  margin: 0 -1.5vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -231,6 +230,9 @@ div.slide2 h3 {
 div.slide2 h4 {
   margin: 0.5vw 4vw;
   font-family: "playfair display", serif;
+}
+div.slide2 h4 br {
+  margin: 2vw 0;
 }
 div.slide2 h3::before {
   transition: all 0.5s ease-in-out;
