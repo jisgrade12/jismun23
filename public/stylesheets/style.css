@@ -293,16 +293,18 @@ div.slide2 a:hover h3::before {
 }
 .swiper {
   width: 100%;
-  height: 50vh;
+  height: 70vh;
 }
 .swiper-slide {
+  text-align: center;
+  display: flex;
+}
+.swiper-slide > div {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-size: 18px;
-  background: #fff;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -311,17 +313,21 @@ div.slide2 a:hover h3::before {
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
-  margin: 0 15px;
+  margin: 1vw;
 }
-.swiper-slide img {
-  height: 30%;
+.swiper-slide > div > img {
+  height: 40%;
   object-fit: cover;
 }
-.swiper-slide > p:nth-child(2) {
+.swiper-slide > div > p:nth-child(2) {
   font-size: 3vw;
+  height: 1vw;
   font-family: "playfair display sc", serif;
 }
-.swiper-slide > p:nth-child(3) {
+.swiper-slide > div > p:nth-child(3) {
   font-size: 1vw;
   font-family: "playfair display", serif;
+}
+.swiper-pagination {
+  margin-bottom: -2vw;
 }
