@@ -291,3 +291,37 @@ div.slide2 a:hover h3::before {
   font-size: 3vw;
   font-weight: 200;
 }
+.swiper {
+  width: 100%;
+  height: 50vh;
+}
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  margin: 0 15px;
+}
+.swiper-slide img {
+  height: 30%;
+  object-fit: cover;
+}
+.swiper-slide > p:nth-child(2) {
+  font-size: 3vw;
+  font-family: "playfair display sc", serif;
+}
+.swiper-slide > p:nth-child(3) {
+  font-size: 1vw;
+  font-family: "playfair display", serif;
+}
