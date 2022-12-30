@@ -81,6 +81,7 @@ nav > div:nth-child(2) > a {
   padding: 0.8vw 0.9vw;
   box-sizing: border-box;
   transition: all 0.5s ease-in-out;
+  border: 1px transparent solid;
 }
 nav > div:nth-child(2) > a:hover {
   background-color: #1e395717;
@@ -151,6 +152,12 @@ h4 {
   font-size: 1.5vw;
   font-weight: lighter;
 }
+h5 {
+  font-family: "playfair display", serif;
+  font-size: 1.3vw;
+  font-weight: 400;
+  margin: 0;
+}
 div.slide1,
 div.slide2 {
   display: flex;
@@ -211,6 +218,7 @@ div.slide1 h2 {
 }
 div.slide1 h1 {
   margin-top: 20vh;
+  text-transform: uppercase;
 }
 div.slide2 {
   align-items: flex-start;
@@ -219,7 +227,7 @@ div.slide2 {
   background-color: var(--lightw);
 }
 div.slide2 > a {
-  margin: 2vw 3vw;
+  margin: 2vw 4vw;
 }
 div.slide2 h3 {
   margin: 0 -1.5vw;
@@ -227,8 +235,28 @@ div.slide2 h3 {
   align-items: center;
   justify-content: center;
 }
+div.slide2 > h3,
+div.slide2 > h4 {
+  margin: 2vw 2vw;
+}
+.slide2 span.hr-ed {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  width: 100%;
+  margin-top: 5vh;
+}
+.slide2 span div {
+  display: flex;
+  align-items: center;
+}
+.slide2 hr {
+  width: 70%;
+  height: 2px;
+  margin: 0 0 0 5vw;
+  background-color: var(--dark);
+}
 div.slide2 h4 {
-  margin: 0.5vw 4vw;
+  margin: 0.5vw 5vw;
   font-family: "playfair display", serif;
 }
 div.slide2 h4 br {
@@ -400,4 +428,92 @@ footer > div > div > div:hover {
 footer > div > h3 {
   font-size: 3vw;
   color: var(--light);
+}
+div.img-text {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+div.img-text img {
+  display: flex;
+  height: 30vw;
+  margin: 0 5vw;
+  justify-self: right;
+  margin-right: 5vw;
+  margin-left: auto;
+}
+div.slide-mid {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 10vw);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 5vw 5vw 1vw 5vw;
+}
+details {
+  display: flex;
+  align-items: center;
+}
+div.slide-mid h4 {
+  display: inline-flex;
+  margin: 0;
+}
+summary > h4 {
+  font-weight: 600;
+}
+summary {
+  outline: none;
+  display: flex;
+  position: relative;
+  cursor: pointer;
+  align-items: center;
+}
+details {
+  box-sizing: border-box;
+}
+details summary::-webkit-details-marker {
+  display: none;
+}
+details[open] > summary:before {
+  transform: rotate(90deg);
+}
+summary:before {
+  content: "chevron_right";
+  font-family: "material symbols outlined";
+  transform: rotate(0);
+  transition: 0.25s transform ease;
+  font-size: 3vw;
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+li {
+  margin: 1vw 0;
+}
+.team {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  margin: 1vw 5vw;
+  column-gap: 5%;
+  row-gap: 5vw;
+}
+.team > div {
+  display: flex;
+  justify-content: center;
+}
+.team > div > img {
+  width: 50%;
+  opacity: 0.5;
+}
+.team > div > p {
+  position: absolute;
+  font-family: "playfair display", serif;
+  font-size: 2vw;
+  align-self: flex-end;
+}
+.team > div > p:nth-child(2) {
+  margin-bottom: 4vw;
+  font-weight: 700;
+}
+.team > div > p:nth-child(3) {
+  margin-top: 4vw;
 }

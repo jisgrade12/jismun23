@@ -59,7 +59,7 @@
       <h2>
         We are proud to host our very first on-campus MUN. The two-day
         conference will take place on February 10-11 2023. Our team has put in
-        so much effort organizing the event. We can’t wait to see you there!
+        so much effort organizing the event. We can't wait to see you there!
       </h2>
       <a href="pages/register.html">
         <div class="main-button">Register Now</div>
@@ -177,41 +177,79 @@
         </div>
         <div class="swiper-pagination"></div>
       </div>
-      <a href="#faq"><h3>FAQs</h3></a>
+      <a href="pages/about.html#faq"><h3>FAQs</h3></a>
+      <h4>
+        <details>
+          <summary>
+            <h4>Should I sign up as a delegate or a chair?</h4>
+          </summary>
+          <div class="content">
+            <h4>
+              If this is your first time attending an MUN sign up as a delegate.
+              A chair will be responsible to moderate a committee and would need
+              prior MUN experience.
+            </h4>
+          </div>
+        </details>
+      </h4>
+      <h4>
+        <details>
+          <summary>
+            <h4>How much does it cost?</h4>
+          </summary>
+          <div class="content">
+            <h4>It will cost ...</h4>
+          </div>
+        </details>
+      </h4>
+      <h4>
+        <details>
+          <summary>
+            <h4>Will food be provided?</h4>
+          </summary>
+          <div class="content">
+            <h4>Yes.</h4>
+          </div>
+        </details>
+      </h4>
+      <h4>
+        <details>
+          <summary>
+            <h4>How should I prepare for an MUN?</h4>
+          </summary>
+          <div class="content">
+            <h4>
+              We recommend all delegates to read this <a>delegate guide</a>. It
+              is also helpful to watch MUN procedures to see it all in action.
+              Don't forget to do your research!
+            </h4>
+          </div>
+        </details>
+      </h4>
+      <h4>
+        <details>
+          <summary>
+            <h4>What are the timings of the conference?</h4>
+          </summary>
+          <div class="content">
+            <h4>
+              10<sup>th</sup> & 11<sup>th</sup> February 2023. For more
+              information on the exact timings check out the
+              <a href="agenda.html" target="_blank">Agenda</a>.
+            </h4>
+          </div>
+        </details>
+      </h4>
     </div>
-    <footer>
-      <div>
-        <h3>Quick links</h3>
-        <div>
-          <div>About Us</div>
-          <div>About Us</div>
-          <div>About Us</div>
-        </div>
-        <div>
-          <div>About Us</div>
-          <div>About Us</div>
-          <div>About Us</div>
-        </div>
-      </div>
-      <div>
-        <h3>Contact Us</h3>
-        <div>
-          <div>About Us</div>
-          <div>About Us</div>
-          <div>About Us</div>
-        </div>
-        <div>
-          <div>About Us</div>
-          <div>About Us</div>
-          <div>About Us</div>
-        </div>
-      </div>
-    </footer>
-    <script src="scripts/firebase.js"></script>
-    <script src="scripts/scroll_nav.js"></script>
+    <div class="nav-resistance"></div>
+    <div w3-include-html="includes/footer.html"></div>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="scripts/firebase.js"></script>
+    <script src="scripts/scroll_nav.js"></script>
     <script src="scripts/swiper.js"></script>
+    <script src="scripts/include.js"></script>
+    <script src="scripts/accordion.js"></script>
     <noscript>
       <link
         rel="stylesheet"
@@ -227,6 +265,7 @@
         cssMain.type = "text/css";
         document.getElementsByTagName("head")[0].appendChild(cssMain);
       })();
+      includeHTML();
     </script>
   </body>
 </html>
