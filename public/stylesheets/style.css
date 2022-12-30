@@ -451,10 +451,6 @@ div.slide-mid {
   text-align: center;
   margin: 5vw 5vw 1vw 5vw;
 }
-details {
-  display: flex;
-  align-items: center;
-}
 div.slide-mid h4 {
   display: inline-flex;
   margin: 0;
@@ -468,9 +464,22 @@ summary {
   position: relative;
   cursor: pointer;
   align-items: center;
+  background-color: #00000024;
+  width: 87vw;
+  padding: 1vw;
+  border-radius: 1vw;
+}
+details .content {
+  background-color: #00000055;
+  border-radius: 1vw;
+  padding: 1vw;
+  margin-top: 1vw;
+  color: var(--light);
 }
 details {
   box-sizing: border-box;
+  display: flex;
+  align-items: center;
 }
 details summary::-webkit-details-marker {
   display: none;
