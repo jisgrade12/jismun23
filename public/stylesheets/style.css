@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display&family=Playfair+Display+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display+SC:wght@400;700;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap");
 :root {
   --light: #f5f7fa;
   --dark: #000000;
@@ -67,6 +67,9 @@ nav > div:nth-child(1) > a > img {
   filter: brightness(0) invert(1);
   transition: all 0.5s ease-in-out;
 }
+nav > div:nth-child(1) > span {
+  transition: all 0.5s ease-in-out;
+}
 nav > div:nth-child(2) {
   display: flex;
   align-items: center;
@@ -84,8 +87,9 @@ nav > div:nth-child(2) > a {
   border: 1px transparent solid;
 }
 nav > div:nth-child(2) > a:hover {
-  background-color: #1e395717;
+  background-color: #1e395768;
   box-sizing: border-box;
+  color: var(--light);
 }
 nav > div:nth-child(2) > a:active {
   border: 1px solid var(--gold);
@@ -143,17 +147,17 @@ h2 {
   font-weight: 300;
 }
 h3 {
-  font-family: "playfair display sc", serif;
+  font-family: "Montserrat", serif;
   font-size: 4vw;
   font-weight: bold;
   text-transform: uppercase;
 }
 h4 {
   font-size: 1.5vw;
-  font-weight: lighter;
+  font-weight: normal;
 }
 h5 {
-  font-family: "playfair display", serif;
+  font-family: "Montserrat", serif;
   font-size: 1.3vw;
   font-weight: 400;
   margin: 0;
@@ -220,6 +224,22 @@ div.slide1 h1 {
   margin-top: 20vh;
   text-transform: uppercase;
 }
+div.slide1 .main-button {
+  z-index: 1;
+  padding: 1.25vw 1.5vw;
+  font-size: 1.5vw;
+  font-weight: 400;
+  background-color: var(--light);
+  box-sizing: border-box;
+  color: var(--accent-dark);
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
 div.slide2 {
   align-items: flex-start;
   text-align: left;
@@ -257,7 +277,7 @@ div.slide2 > h4 {
 }
 div.slide2 h4 {
   margin: 0.5vw 5vw;
-  font-family: "playfair display", serif;
+  font-family: "Montserrat", serif;
 }
 div.slide2 h4 br {
   margin: 2vw 0;
@@ -274,21 +294,27 @@ div.slide2 a:hover h3::before {
   margin-right: 1vw;
   color: var(--text-color);
 }
-.main-button {
-  z-index: 1;
-  padding: 1.25vw 1.5vw;
-  font-size: 1.5vw;
-  font-weight: 400;
-  background-color: var(--light);
-  box-sizing: border-box;
-  color: var(--accent-dark);
-  cursor: pointer;
-  transition: all 0.5s ease-in-out;
-  text-transform: uppercase;
+div.slide3 {
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  margin: 0;
+  flex-direction: column;
+}
+div.slide3 > img {
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+}
+div.slide3 > h1,
+div.slide3 > h2 {
+  z-index: 2;
+  color: var(--light);
+}
+div.slide3 > h2 {
+  transform: translateY(-3vw);
 }
 .main-button:hover {
   transform: translateY(-0.25vw);
@@ -309,13 +335,13 @@ div.slide2 a:hover h3::before {
   padding: 0 3vw;
 }
 .slide-divide > div:nth-child(1) {
-  font-family: "playfair display sc", serif;
+  font-family: "Montserrat", serif;
   border-right: var(--accent-dark) 0.3vw solid;
   font-size: 6vw;
   font-weight: 900;
 }
 .slide-divide > div:nth-child(2) {
-  font-family: "playfair display", serif;
+  font-family: "Montserrat", serif;
   font-size: 3vw;
   font-weight: 200;
 }
@@ -339,20 +365,20 @@ div.slide2 a:hover h3::before {
   display: grid;
   grid-template-rows: 60% 20% 30%;
   text-align: center;
-  border: 0.3vw solid var(--gold);
   border-radius: 1vw;
   overflow: visible;
   transition: all 0.5s ease-in-out;
   width: 100%;
   height: 100%;
+  background-color: #ededed;
 }
 .swiper-slide > a > div:hover {
   background-color: var(--gold);
   color: var(--light);
 }
 .swiper-slide > a > div:hover > img {
-  height: 32vw;
-  margin-top: 12.75vw;
+  filter: contrast(1.3) drop-shadow(0px 10px #00000047);
+  transform: translateY(-10px);
 }
 .swiper-slide > a > div > img {
   height: 100%;
@@ -368,12 +394,12 @@ div.slide2 a:hover h3::before {
 .swiper-slide > a > div > p:nth-child(2) {
   font-size: 3vw;
   margin-top: 2vw;
-  font-family: "playfair display sc", serif;
+  font-family: "Montserrat", serif;
 }
 .swiper-slide > a > div > p:nth-child(3) {
   display: flex;
   font-size: 1.5vw;
-  font-family: "playfair display", serif;
+  font-family: "Montserrat", serif;
   justify-self: center;
   margin: 1vw 1vw;
 }
@@ -448,11 +474,15 @@ div.img-text {
 }
 div.img-text img {
   display: flex;
-  height: 30vw;
+  object-fit: cover;
+  height: 20vw;
+  width: 30vw;
   margin: 0 5vw;
   justify-self: right;
   margin-right: 5vw;
   margin-left: auto;
+  filter: drop-shadow(var(--accent-dark) -1vw 1vw);
+  box-shadow: var(--gold) 1vw -1vw;
 }
 div.slide-mid {
   display: flex;
@@ -527,7 +557,7 @@ li {
 }
 .team > div > p {
   position: absolute;
-  font-family: "playfair display", serif;
+  font-family: "Montserrat", serif;
   font-size: 2vw;
   align-self: flex-end;
 }
