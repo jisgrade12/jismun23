@@ -418,6 +418,7 @@ div.slide3 > h2 {
   color: var(--gold);
   font-size: 5vw;
   cursor: pointer;
+  z-index: 1000;
 }
 .swiper-button-prev-unique {
   transform: translateY(-40vh) translateX(-0.5vw);
