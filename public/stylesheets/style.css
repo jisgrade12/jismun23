@@ -568,3 +568,74 @@ li {
 .team > div > p:nth-child(3) {
   margin-top: 4vw;
 }
+strong {
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+.register-3 {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  column-gap: 2.5%;
+  margin: 1vw 5vw;
+  width: calc(100% - 5vw);
+}
+.register-3 > div {
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: var(--accent-dark);
+  text-align: left;
+  padding: 1vw;
+}
+.register-3 > div > p {
+  margin: 1.5vw 1vw;
+}
+.register-3 > div > p:nth-child(1) {
+  font-size: 3vw;
+  line-height: 1vw;
+  font-weight: 700;
+  display: flex;
+  align-self: center;
+}
+.register-3 > div > hr {
+  width: 50%;
+  margin: 0;
+  display: flex;
+  align-self: center;
+  margin-top: 0.5vw;
+}
+.register-3 > div > p:nth-child(n + 2) {
+  font-size: 1.5vw;
+}
+.register-3 > div > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  background-color: var(--gold);
+  padding: 1vw;
+  text-transform: uppercase;
+  color: var(--light);
+  font-weight: 500;
+  margin: 2vw 0;
+  border: 0.3vw transparent solid;
+}
+.register-3 > div > a:hover {
+  border: 0.3vw var(--gold) solid;
+  background-color: transparent;
+  color: var(--gold);
+}
+.guides > a {
+  display: block;
+  font-size: 2.5vw;
+  margin: 2vw 0;
+}
+.guides > a > span {
+  font-size: 3vw;
+  transition: all 0.5s ease-in-out;
+  font-variation-settings: "FILL" 0, "wght" 480, "GRAD" 0, "opsz" 48;
+}
+.guides > a:hover > span {
+  font-variation-settings: "FILL" 1, "wght" 480, "GRAD" 0, "opsz" 48;
+}
