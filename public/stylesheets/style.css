@@ -295,18 +295,20 @@ div.slide2 a:hover h3::before {
   color: var(--text-color);
 }
 div.slide3 {
-  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   margin: 0 0 5vw 0;
   flex-direction: column;
+  height: 24vw;
 }
 div.slide3 > img {
   width: 100%;
   position: absolute;
   z-index: 1;
+  object-fit: cover;
+  margin: 0;
 }
 div.slide3 > h1,
 div.slide3 > h2 {
@@ -394,6 +396,7 @@ div.slide3 > h2 {
 .swiper-slide > a > div > p:nth-child(2) {
   font-size: 3vw;
   margin-top: 2vw;
+  font-weight: 800;
   font-family: "Montserrat", serif;
 }
 .swiper-slide > a > div > p:nth-child(3) {
@@ -629,14 +632,16 @@ strong {
   color: var(--gold);
 }
 .guides > a {
-  display: block;
+  display: flex;
   font-size: 2.5vw;
   margin: 2vw 0;
+  align-items: center;
 }
 .guides > a > span {
-  font-size: 3vw;
+  font-size: 3.5vw;
   transition: all 0.5s ease-in-out;
   font-variation-settings: "FILL" 0, "wght" 480, "GRAD" 0, "opsz" 48;
+  margin-right: 1vw;
 }
 .guides > a:hover > span {
   font-variation-settings: "FILL" 1, "wght" 480, "GRAD" 0, "opsz" 48;
@@ -684,4 +689,58 @@ strong {
 }
 .fof-img img {
   width: 35vw;
+}
+.contact-divide {
+  display: grid;
+  grid-template-columns: 35% 65%;
+  column-gap: 5vw;
+  width: calc(100% - 15vw);
+  margin: 0 5vw;
+}
+.contact-divide > div {
+  padding: 1vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: left;
+}
+.contact-divide > div:nth-child(1) {
+  background-color: #f4f4f4;
+}
+.contact-divide > div:nth-child(2) > iframe {
+  width: 100%;
+  height: 80%;
+  filter: drop-shadow(var(--accent-dark) 1vw -1vw);
+  box-shadow: var(--gold) -1vw 1vw;
+  margin-top: 1vw;
+}
+.contact-divide > div > h3 {
+  font-size: 3vw;
+  text-transform: none;
+  display: flex;
+  text-align: left;
+  justify-content: left;
+  margin-left: 1vw;
+  width: 100%;
+}
+.contact-divide > div > h3::before {
+  display: none;
+}
+.contact-div-divider {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  font-size: 1.5vw;
+}
+.contact-div-divider > div {
+  margin: 1vw 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.contact-div-divider > div > span {
+  font-size: 3vw;
+  display: flex;
+  align-self: center;
+  justify-self: center;
 }
