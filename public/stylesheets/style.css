@@ -430,7 +430,7 @@ div.slide3 > h2 {
   transform: translateY(-52vh) translateX(94vw);
 }
 footer {
-  background-color: var(--accent-dark);
+  background-color: #010d27;
   display: grid;
   grid-template-columns: 50% 50%;
   padding-bottom: 3vw;
