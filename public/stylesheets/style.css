@@ -96,13 +96,20 @@ nav > div:nth-child(2) > a:active {
   transition: all 3ms ease-in-out;
 }
 nav > div:nth-child(2) > a:last-child {
+  font-family: "material symbols outlined";
+  font-size: 3vw;
+  cursor: pointer;
+  display: none;
+  user-select: none;
+}
+nav > div:nth-child(2) > a:nth-child(7) {
   background-color: var(--gold);
   color: var(--light);
   padding: 0.7vw 2vw;
   border: var(--gold) 1px solid;
   box-sizing: border-box;
 }
-nav > div:nth-child(2) > a:last-child:hover {
+nav > div:nth-child(2) > a:nth-child(7):hover {
   background-color: var(--accent-dark);
   color: var(--light);
   border: var(--light) 1px solid;
@@ -776,4 +783,37 @@ strong {
   line-height: 10vw;
   margin: 3vw;
   text-align: center;
+}
+#myNav {
+  background-color: var(--dark);
+  color: var(--light);
+  font-size: 5vw;
+  height: 100%;
+  width: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  transform: translateX(100%);
+  transition: all 0.7s ease-in-out;
+  flex-direction: column;
+}
+#myNav > a {
+  margin: 1.7vh;
+}
+#myNav > a:hover {
+  color: var(--gold);
+}
+@media (max-width: 700px) {
+  nav > div:nth-child(2) > a:last-child {
+    display: block !important;
+    margin-right: -2vw;
+  }
+  nav > div:nth-child(2) > a:nth-child(n) {
+    display: none;
+  }
 }
